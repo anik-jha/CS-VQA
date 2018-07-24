@@ -1,0 +1,16 @@
+net: "/home/anik/caffe/examples/imagenet/blpsu_googlenet.prototxt"
+test_iter: 1000
+test_interval: 4000
+test_initialization: false
+display: 1000
+average_loss: 1000
+base_lr: 0.001    #changable
+lr_policy: "step" #changable
+stepsize: 320000  #changable
+gamma: 0.96
+max_iter: 10000000 
+momentum: 0.9
+weight_decay: 0.0002
+snapshot: 100000
+snapshot_prefix: "/media/ssd/lichi/VQA1_0_01/caffe_model/recon_googlenet_pi_a0.001_mean"  #create caffemodel
+solver_mode: GPU

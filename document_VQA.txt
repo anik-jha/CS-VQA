@@ -1,0 +1,67 @@
+blocked-based phiTphix
+blocked_pTp.py operate phiTphiX for one file
+blpTp_forVQA.py iterate over directory for files
+
+phiTphiX
+make_validation_hadamard_old.m phiTphiX
+
+ReconNet
+test_imagenet_cc.m   Reconstruct ImageNet
+test_imagenet_val.m
+reconet_forVQA.py  iterate over directory for files
+blpTp_recon.py     Reconstruct VQA 
+
+create LMDB
+create_imagenet.sh
+
+training CNN
+blpsu_googlenet.prototxt specify CNN architecture and input data
+blpsu_googlenet_solver.prototxt  specify hyperparameter for training and snapshot
+
+Run caffe training
+train_caffe.sh
+
+VQA preprocessing
+vqa_cs_preprocessing.py  generate vqa_raw.json
+prepro.py   take json files from above and output a data_prepro.json and data_prepro.h5
+prepro_img_param_nobatch.py feedforward caffemodel to generate hdf5 image feature
+
+VQA
+try_vqacs_tfmodel.py training
+vqacs_tfmodel.py testing and output json file for answer
+vqaEvalDemo.py  evaluate json file 
+
+caffemodel
+block-based: /media/twotb/imagenet/snap_blgoogle/bl_google_pi_a0.0001_mean_iter_260000.caffemodel
+phiTphiX: /media/ssd/lichi/imagenet/googlenet_pi_mean_dlr_ss160000_f2200000_resume_iter_5500000.caffemodel
+ReconNet: /media/twotb/imagenet/snap_recon_gg/resume_recon_gg_a0.0001_s05_inter_400000.caffemodel
+
+database locations
+-blocked-based 
+VQA dataset
+train: /media/ssd/lichi/VQA/train_coco025_blpTp
+val : /media/ssd/lichi/VQA/val_coco025_blpTp
+
+imagenet
+/media/ssd/lichi/imagenet/blockedpTp/ilsvrc12_train_bpTp025_lmdb
+/media/ssd/lichi/imagenet/blockedpTp/ilsvrc12_val_bpTp025_lmdb
+
+
+-phiTphiX
+VQA dataset
+train: /media/ssd/lichi/VQA/coco_train_hadamard_0_25
+val : /media/ssd/lichi/VQA/coco_val_hadamard_0_25
+
+imagenet
+/media/ssd/lichi/imagenet/blockedpTp/imagenet_pTp0_25_train
+/media/ssd/lichi/imagenet/blockedpTp/imagenet_pTp0_25_val
+
+-ReconNet
+VQA dataset
+train: /media/ssd/lichi/VQA/train_coco025_reconet
+val : /media/ssd/lichi/VQA/val_coco025_reconet
+
+imagenet 
+lmdb
+/media/ssd/lichi/imagenet/recon_ilsvrc12_train_lmdb
+/media/ssd/lichi/imagenet/recon_ilsvrc12_val_lmdb
