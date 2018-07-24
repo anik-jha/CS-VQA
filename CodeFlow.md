@@ -1,21 +1,21 @@
 # Following is the sequence in which the codes needs to be executed
- ## blocked-based phiTphix
+ ## Using blocked-based phiTphix
   + blocked_pTp.py operate phiTphiX for one file
   + blpTp_forVQA.py iterate over directory for files
 
- ## phiTphiX
+ ## Using phiTphiX
    + make_validation_hadamard_old.m phiTphiX
 
- ## ReconNet
+ ## Using ReconNet
   + test_imagenet_cc.m   Reconstruct ImageNet
   + test_imagenet_val.m
   + reconet_forVQA.py  iterate over directory for files
   + blpTp_recon.py     Reconstruct VQA 
 
- ## create LMDB
+ ## Create LMDB
   + create_imagenet.sh
 
- - training CNN
+ ## Training CNN
   + blpsu_googlenet.prototxt specify CNN architecture and input data
   + blpsu_googlenet_solver.prototxt  specify hyperparameter for training and snapshot
 
