@@ -30,9 +30,9 @@ def dim_mul(dim_image):
 print 'Loading parameters ...'
 # Data input setting
 
-input_img_h5 = '/media/ssd/lichi/VQA2/vqa2_25/codes/feat_imgs_blgoogle485_fc_nobatch.h5'
-input_ques_h5 = '/media/ssd/lichi/VQA2/vqa2_25/codes/bl_data_prepro.h5'
-input_json = '/media/ssd/lichi/VQA2/vqa2_25/codes/bl_data_prepro.json'
+input_img_h5 = '/path/to/image_features/feat_imgs_blgoogle485_fc_nobatch.h5'
+input_ques_h5 = '/path/to/root_folder/bl_data_prepro.h5'
+input_json = '/path/to/root_folder/codes/bl_data_prepro.json'
 
 
 # Train Parameters setting
